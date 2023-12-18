@@ -1,0 +1,27 @@
+{
+  "name": "my-montage-cli",
+  "version": "1.0.0",
+  "description": "my montage cli",
+  "main": "index.js",
+  "bin": {
+    "mon2": "./core/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "montage",
+    "cli"
+  ],
+  "author": "wyx",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^7.1.0",
+    "figlet": "^1.7.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^8.2.6",
+    "ora": "^3.4.0",
+    "path": "^0.12.7"
+  }
+}
