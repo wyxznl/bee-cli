@@ -8,6 +8,8 @@ const inputFrameVersion = require("../lib/inputFrameVersion");
 const selectFeature = require("../lib/selectFeature");
 const updateBabelRc = require("../lib/updateBabelRc");
 const updateTsConfig = require("../lib/updateTsConfig");
+const inputAlias = require("../lib/inputAlias");
+const selectAliasDirectory = require("../lib/selectAliasDirectory");
 
 const curComponentPath = process.cwd();
 const componentName = path.basename(curComponentPath);
@@ -36,10 +38,13 @@ async function main() {
   // 打印选择的框架版本和特性
   console.log(curFrameVersion, curSelectedFeature, "curFrameVersion");
   // 更新 .babelrc 文件
-  updateBabelRc(curSelectedFeature);
-  // 如果选择了 TypeScript 特性，那么需要更新 tsconfig.json 文件
-  curSelectedFeature.includes("TypeScript") && updateTsConfig();
-  // 根据选择的特性更新 package.json 文件
-  updatePackage.updateByFeature();
+  const devDepencies = updateBabelRc(curSelectedFeature);
+  const curAliases = await inputAlias();
+  console.log(curAliases, "curAliases");
+  await selectAliasDirectory(curAliases);
+  //   // 根据选择的特性更新 package.json 文件
+  //   updatePackage.updateByFeature();
+  //   // 如果选择了 TypeScript 特性，那么需要更新 tsconfig.json 文件
+  //   curSelectedFeature.includes("TypeScript") && updateTsConfig();
 }
 main();
