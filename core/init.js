@@ -10,6 +10,7 @@ const updateBabelRc = require("../lib/updateBabelRc");
 const updateTsConfig = require("../lib/updateTsConfig");
 const inputAlias = require("../lib/inputAlias");
 const selectAliasDirectory = require("../lib/selectAliasDirectory");
+const importDependencies = require("../lib/importDependencies");
 
 const curComponentPath = process.cwd();
 const componentName = path.basename(curComponentPath);
@@ -39,9 +40,14 @@ async function main() {
   console.log(curFrameVersion, curSelectedFeature, "curFrameVersion");
   // 更新 .babelrc 文件
   const devDepencies = updateBabelRc(curSelectedFeature);
+  // 输入别名
   const curAliases = await inputAlias();
-  console.log(curAliases, "curAliases");
-  await selectAliasDirectory(curAliases);
+  // 选择别名目录
+  const aliasDir = await selectAliasDirectory(curComponentPath, curAliases);
+  console.log(aliasDir, "curAliases");
+  // 导入依赖
+  //   importDependencies();
+
   //   // 根据选择的特性更新 package.json 文件
   //   updatePackage.updateByFeature();
   //   // 如果选择了 TypeScript 特性，那么需要更新 tsconfig.json 文件
