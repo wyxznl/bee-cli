@@ -16,6 +16,10 @@
   "author": "wyx",
   "license": "ISC",
   "dependencies": {
+    "@babel/parser": "^7.23.6",
+    "@babel/traverse": "^7.23.7",
+    "babel-traverse": "^6.26.0",
+    "babylon": "^6.18.0",
     "chalk": "^4.0.0",
     "commander": "^7.1.0",
     "figlet": "^1.7.0",

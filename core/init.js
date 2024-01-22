@@ -43,10 +43,10 @@ async function main() {
   // 输入别名
   const curAliases = await inputAlias();
   // 选择别名目录
-  const aliasDir = await selectAliasDirectory(curComponentPath, curAliases);
-  console.log(aliasDir, "curAliases");
+  const aliasDirArr = await selectAliasDirectory(curComponentPath, curAliases);
+  console.log(aliasDirArr, "curAliases");
   // 导入依赖
-  //   importDependencies();
+  importDependencies(aliasDirArr);
 
   //   // 根据选择的特性更新 package.json 文件
   //   updatePackage.updateByFeature();
