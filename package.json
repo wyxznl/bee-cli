@@ -4,7 +4,7 @@
   "description": "my montage cli",
   "main": "index.js",
   "bin": {
-    "mon2": "./core/index.js"
+    "bee": "./core/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

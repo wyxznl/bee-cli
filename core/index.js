@@ -2,7 +2,7 @@
 const program = require("commander");
 
 program
-  .version(`mon2 ${require("../package.json")}.version`)
+  .version(`bee ${require("../package.json")}.version`)
   .usage("<command> [options]");
 
 program
