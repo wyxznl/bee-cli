@@ -46,7 +46,7 @@ async function main() {
   const aliasDirArr = await selectAliasDirectory(curComponentPath, curAliases);
   console.log(aliasDirArr, "curAliases");
   // 导入依赖
-  importDependencies(aliasDirArr);
+  importDependencies(aliasDirArr, curComponentPath);
 
   //   // 根据选择的特性更新 package.json 文件
   //   updatePackage.updateByFeature();
