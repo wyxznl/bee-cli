@@ -48,6 +48,11 @@ async function main() {
   // 导入依赖
   importDependencies(aliasDirArr, curComponentPath);
 
+  // 更新引用处的路径
+  // 增加webpack配置
+  // 自动编译
+  // 上传git
+
   //   // 根据选择的特性更新 package.json 文件
   //   updatePackage.updateByFeature();
   //   // 如果选择了 TypeScript 特性，那么需要更新 tsconfig.json 文件
