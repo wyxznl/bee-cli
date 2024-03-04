@@ -1,7 +1,7 @@
 {
-  "name": "my-montage-cli",
+  "name": "bee-cli",
   "version": "1.0.0",
-  "description": "my montage cli",
+  "description": "bee cli",
   "main": "index.js",
   "bin": {
     "bee": "./core/index.js"
