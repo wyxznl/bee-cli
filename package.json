@@ -27,6 +27,7 @@
     "inquirer": "^8.2.6",
     "inquirer-file-tree-selection-prompt": "^1.0.19",
     "ora": "^3.4.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "antd": "latest"
   }
 }
